@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Learn</title>
     <script src="../js/include.js" type="text/javascript"></script>
+    <script src="../js/vue-learn.js"></script>
+    '
 </head>
 <body>
 <div id="app-1">
@@ -13,6 +15,21 @@
 <div id="app-2">
     <p>{{rawHtml}}</p>
     <p v-html="rawHtml"></p>
+</div>
+
+<div id="inputDisable">
+    <input type="text" v-bind:disabled="inputIsDisable">
+</div>
+
+<div id="expression">
+    {{ ok ? "我觉得可以" : "我觉得不行"}}
+</div>
+
+<!--缩写-->
+<a id="abbreviation" :style="abb" :href="myHref">缩写测试！</a>
+
+<div id="array-count">
+    <span>数组的长度是{{count}}</span>
 </div>
 </body>
 </html>
